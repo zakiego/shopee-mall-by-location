@@ -1,9 +1,11 @@
 import { BrandID, DetailShop, ListOfficialShop } from "./type";
 import * as download from "image-downloader";
-import fetch from "cross-fetch";
+import originalFetch from "cross-fetch";
 import logger from "./logger";
 import { pick } from "remeda";
 import * as fs from "fs";
+
+const fetch = require("fetch-retry")(originalFetch);
 
 export const getListOfficialShop = async () => {
   logger.info("Get list official shop");
