@@ -35,8 +35,6 @@ export const getShopDetail = async (username: string) => {
 
   const resp: DetailShop = await fetch(endpoint).then((resp) => resp.json());
 
-  await getIcon(resp.data.account.portrait);
-
   return {
     shop_location: resp.data.shop_location,
     icon: resp.data.account.portrait,
