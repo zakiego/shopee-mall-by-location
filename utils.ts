@@ -1,9 +1,11 @@
 import { BrandID, DetailShop, ListOfficialShop } from "./type";
 import * as download from "image-downloader";
-import fetch from "cross-fetch";
+import originalFetch from "cross-fetch";
 import logger from "./logger";
 import { pick } from "remeda";
 import * as fs from "fs";
+
+const fetch = require("fetch-retry")(originalFetch);
 
 export const getListOfficialShop = async () => {
   logger.info("Get list official shop");
@@ -34,8 +36,6 @@ export const getShopDetail = async (username: string) => {
   const endpoint = `https://shopee.co.id/api/v4/shop/get_shop_detail?sort_sold_out=0&username=${username}`;
 
   const resp: DetailShop = await fetch(endpoint).then((resp) => resp.json());
-
-  await getIcon(resp.data.account.portrait);
 
   return {
     shop_location: resp.data.shop_location,
