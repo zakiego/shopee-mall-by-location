@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@types/node': ^18.7.13
   cross-fetch: ^3.1.5
+  fetch-retry: ^5.0.3
   image-downloader: ^4.3.0
   lodash: ^4.17.21
   pino: ^8.4.2
@@ -14,6 +15,7 @@ specifiers:
 dependencies:
   '@types/node': 18.7.13
   cross-fetch: 3.1.5
+  fetch-retry: 5.0.3
   image-downloader: 4.3.0
   lodash: 4.17.21
   pino: 8.4.2
@@ -151,6 +153,10 @@ packages:
 
   /fast-safe-stringify/2.1.1:
     resolution: {integrity: sha512-W+KJc2dmILlPplD/H4K9l9LcAHAfPtP6BY84uVLXQ6Evcz9Lcg33Y2z1IVblT6xdY54PXYVHEv+0Wpq8Io6zkA==}
+    dev: false
+
+  /fetch-retry/5.0.3:
+    resolution: {integrity: sha512-uJQyMrX5IJZkhoEUBQ3EjxkeiZkppBd5jS/fMTJmfZxLSiaQjv2zD0kTvuvkSH89uFvgSlB6ueGpjD3HWN7Bxw==}
     dev: false
 
   /follow-redirects/1.15.1:

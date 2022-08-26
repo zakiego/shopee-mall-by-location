@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/node": "^18.7.13",
     "cross-fetch": "^3.1.5",
+    "fetch-retry": "^5.0.3",
     "image-downloader": "^4.3.0",
     "lodash": "^4.17.21",
     "pino": "^8.4.2",
